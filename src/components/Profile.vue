@@ -1,12 +1,12 @@
 <template>
   <div>
       <!--Contact Information-->
-      <h1> {{ firstName }} {{ lastName }} </h1>
-      {{ email }}
+      <h1 class="item"> {{ firstName }} {{ lastName }} </h1>
+      <h3 class="item"> {{ email }} </h3>
       <br>
       <br>
       <!--Entering user's graduation year-->
-      <div>
+      <div class="item">
           From the options below, select your anticipated graduation year.
           <br>
           <select v-model="gradYear">
@@ -19,7 +19,7 @@
       </div>
       <br>
       <!--Entering user's college-->
-      <div>
+      <div class="item">
           From the options below, select your Drexel University College.
           <br>
           <select v-model="userCollege">
@@ -38,8 +38,9 @@
               <option>School of Education</option>
           </select>
       </div>
+      <br>
       <!--Entering user's major-->
-      <div v-if="userCollege == 'Antoinette Westphal College of Media Arts & Design'">
+      <div v-if="userCollege == 'Antoinette Westphal College of Media Arts & Design'" class="item">
           <p> What is your major in the Antoinette Westphal College of Media Arts & Design? </p>
           <select v-model="userMajor">
               <option>Animation & Visual Effects (BS)</option>
@@ -62,7 +63,7 @@
               <option>Westphal Studies Program (BS)</option>
           </select>
       </div>
-      <div v-else-if="userCollege == 'Bennett S. LeBow College of Business'">
+      <div v-else-if="userCollege == 'Bennett S. LeBow College of Business'" class="item">
           <p> What is your major in the Bennett S. LeBow College of Business? </p>
           <select v-model="userMajor">
               <option>Accounting (BSBA)</option>
@@ -80,7 +81,7 @@
               <option>Technology Innovation Management (co-major) (BSBA)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'Center for Food and Hospitality Management'">
+      <div v-if="userCollege == 'Center for Food and Hospitality Management'" class="item">
           <p> What is your major in the Center for Food and Hospitality Management? </p>
           <select v-model="userMajor">
               <option>Culinary Arts & Science (BSCAS)</option>
@@ -88,19 +89,19 @@
               <option>Hospitality Management (BSHM)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'Center for Sport Management'">
+      <div v-if="userCollege == 'Center for Sport Management'" class="item">
           <p> What is your major in the Center for Sport Management? </p>
           <select v-model="userMajor">
               <option>Sport Management (BSSM)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'Close School of Entrepreneurship'">
+      <div v-if="userCollege == 'Close School of Entrepreneurship'" class="item">
           <p> What is your major in the Close School of Entrepreneurship? </p>
           <select v-model="userMajor">
               <option>Entrepreneurship and Innovation (BA)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'College of Arts and Sciences'">
+      <div v-if="userCollege == 'College of Arts and Sciences'" class="item">
           <p> What is your major in the College of Arts and Sciences? </p>
           <select v-model="userMajor">
               <option>Anthropology (BA)</option>
@@ -124,7 +125,7 @@
               <option>Sociology (BA)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'College of Computing & Informatics'">
+      <div v-if="userCollege == 'College of Computing & Informatics'" class="item">
           <p> What is your major in the College of Computing & Informatics? </p>
           <select v-model="userMajor">
               <option>Computer Science (BACS, BSCS)</option>
@@ -134,7 +135,7 @@
               <option>Software Engineering (BSSE)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'College of Engineering'">
+      <div v-if="userCollege == 'College of Engineering'" class="item">
           <p> What is your major in the College of Engineering? </p>
           <select v-model="userMajor">
               <option>Architectural Engineering (BSAE)</option>
@@ -151,7 +152,7 @@
               <option>Property Management (BSPRMT)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'College of Nursing and Health Professions'">
+      <div v-if="userCollege == 'College of Nursing and Health Professions'" class="item">
           <p> What is your major in the College of Nursing and Health Professions? </p>
           <select v-model="userMajor">
               <option>Behavioral Health Counseling (BS)</option>
@@ -163,25 +164,25 @@
               <option>Nutrition and Foods (BS)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'Dornsife School of Public Health'">
+      <div v-if="userCollege == 'Dornsife School of Public Health'" class="item">
           <p> What is your major in the Dornsife School of Public Health? </p>
           <select v-model="userMajor">
               <option>Public Health (BS)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'Goodwin College of Professional Studies'">
+      <div v-if="userCollege == 'Goodwin College of Professional Studies'" class="item">
           <p> What is your major in the Goodwin College of Professional Studies? </p>
           <select v-model="userMajor">
               <option>General Studies (BS)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'School of Biomedical Engineering, Science and Health Systems'">
+      <div v-if="userCollege == 'School of Biomedical Engineering, Science and Health Systems'" class="item">
           <p> What is your major in the School of Biomedical Engineering, Science and Health Systems? </p>
           <select v-model="userMajor">
               <option>Biomedical Engineering (BSBE)</option>
           </select>
       </div>
-      <div v-if="userCollege == 'School of Education'">
+      <div v-if="userCollege == 'School of Education'" class="item">
           <p> What is your major in the School of Education? </p>
           <select v-model="userMajor">
               <option>Design of Learning Technologies (BS)</option>
@@ -193,10 +194,10 @@
       </div>
       <br>
       <!--Entering user's skills-->
-      <h3>Skills</h3>
+      <h3 class="item">Skills</h3>
+      <h4 class="item">Skills could include anything from JavaScript and Python to Playing the Drums or Photography.</h4>
       <input type='text' class='input' placeholder="What skills do you have?" v-model="newSkill" v-validate="'min:5'" name="skill" @keyup.enter="addSkill">
       <p class="alert" v-if="errors.has('skill')">{{ errors.first('skill') }}</p>
-      <h6>Skills could include anything from JavaScript and Python to Playing the Drums or Photography.</h6>
       <div v-for="(skill,index) in skills" :key="skill.id" class="item">
           <div class="item-left">
               <div v-if="!skill.editing" @dblclick="editSkill(skill)" class="item-label">{{ skill.title }}</div>
@@ -208,10 +209,10 @@
       </div>
       <!--Entering user's work experience-->
       <br>
-      <h3>Work Experience</h3>
+      <h3 class="item">Work Experience</h3>
+      <h4 class="item">Your experiences should include any past projects or work you have participated in.</h4>
       <input type='text' class='input' placeholder="What work experience do you have?" v-model="newExperience" @keyup.enter="addExperience" v-validate="'min:5'" name="experience">
       <p class="alert" v-if="errors.has('experience')">{{ errors.first('experience') }}</p>
-      <h6>Your experiences should include any past projects or work you have participated in.</h6>
       <div v-for="(experience,index) in experiences" :key="experience.id" class="item">
           <div class="item-left">
               <div v-if="!experience.editing" @dblclick="editExperience(experience)" class="item-label">{{ experience.title }}</div>
@@ -222,8 +223,8 @@
           </div>
       </div>
       <br>
-      Are you available to work on projects right now?
-      <div>
+      <h4 class="item"> Are you available to work on projects right now?</h4>
+      <div class="radio">
           <input type="radio" id="available" value=true v-model="work">
           <label for="available">Yes!</label>
           <br>
@@ -232,10 +233,10 @@
       </div>
       <!--Entering interests-->
       <br>
-      <h3>Interests</h3>
+      <h3 class="item">Interests</h3>
+      <h4 class="item">Your experiences interest should include anything you are passionate about outside of class.</h4>
       <input type='text' class='input' placeholder="What are you interested in?" v-model="newInterest" @keyup.enter="addInterest" v-validate="'min:5'" name="interest">
       <p class="alert" v-if="errors.has('interest')">{{ errors.first('interest') }}</p>
-      <h6>Your experiences interest should include anything you are passionate about outside of class.</h6>
       <div v-for="(interest,index) in interests" :key="interest.id" class="item">
           <div class="item-left">
               <div v-if="!interest.editing" @dblclick="editInterest(interest)" class="item-label">{{ interest.title }}</div>
@@ -244,6 +245,11 @@
           <div class="remove-item" @click="removeInterest(index)">
               &times;
           </div>
+      </div>
+      <div>
+            <button v-on:click="submitMessage" class="submit-item">
+                Submit
+            </button>
       </div>
   </div>
 </template>
@@ -406,27 +412,45 @@ methods: {
     removeInterest(index) {
         this.interest.splice(index, 1)
     },
+    submitMessage() {
+        alert("You hit the submit button.")
+    }
 }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
     .input {
         width: 100%;
         padding: 10px 18px;
         font-size: 18px;
         margin-bottom: 16px;
+        margin-left: 40px;
+        margin-right: 40px;
 
         &:focus{
             outline: 0;
         }
+    }
+    .radio {
+        margin-left: 70px;
+        margin-right: 70px;
     }
     .item {
         margin-bottom: 12px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .submit-item {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     .remove-item {
         cursor: pointer;
@@ -438,11 +462,15 @@ methods: {
     .item-left {
         display: flex;
         align-items: center;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     .item-label {
         padding: 10px;
         border: 1 px solid white;
         margin-left: 12px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
     .item-edit {
         font-size: 24px;
